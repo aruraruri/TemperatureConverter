@@ -60,4 +60,15 @@ class TemperatureConverterTest {
     void isVeryExtremeColdTemperature() {
         assertTrue(temperatureConverter.isExtremeTemperature(-70.0));
     }
+
+    @Test
+    void bigKelvinToC() {
+        assertEquals(9726.85, temperatureConverter.kelvinToCelcius(10000.0));
+    }
+
+    @Test
+    void zeroKelvinToC() {
+        assertEquals(-273.15, temperatureConverter.kelvinToCelcius(0));
+    }
+
 }
